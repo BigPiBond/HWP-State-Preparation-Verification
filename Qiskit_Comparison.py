@@ -11,7 +11,6 @@ def generate_target_state(n):
     state_vector = np.zeros(dim, dtype=complex)
     
     def calculate_unnormalized_coeff(j1, j2, n):
-        # 注意：这里的 j1, j2 对应公式中的索引，通常是从 1 到 n
         term1 = np.sin(np.pi * j1 / (n + 1)) * np.sin(2 * np.pi * j2 / (n + 1))
         term2 = np.sin(np.pi * j2 / (n + 1)) * np.sin(2 * np.pi * j1 / (n + 1))
         return term1 - term2
